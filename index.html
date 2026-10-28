@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fukuoka Family Trip — March 2027</title>
+<link href="index_files/css2_XxaF.css" rel="stylesheet">
+<style>
+  :root {
+    --ink:       #1a1614;
+    --paper:     #f7f4ef;
+    --warm-mid:  #e8e2d9;
+    --plum:      #5c3d52;
+    --plum-light:#8a5f7a;
+    --sakura:    #e8a0b0;
+    --sakura-pale:#f5dde4;
+    --gold:      #b8860b;
+    --gold-light:#f0d080;
+    --moss:      #4a6741;
+    --moss-light:#a8c5a0;
+    --sky:       #4a7a9b;
+    --sky-light: #cde4f0;
+    --rule:      rgba(92,61,82,0.15);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--plum);
+    color: #fff;
+    padding: 64px 48px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '桜';
+    position: absolute;
+    right: -20px; top: -30px;
+    font-size: 300px;
+    opacity: 0.06;
+    font-family: 'Shippori Mincho', serif;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sakura);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  .hero-sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    margin-bottom: 36px;
+  }
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tag {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ── SUMMARY BAR ── */
+  .summary-bar {
+    background: var(--plum-light);
+    color: #fff;
+    padding: 0 48px;
+  }
+  .summary-bar-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .summary-item {
+    padding: 20px 16px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+  }
+  .summary-item:last-child { border-right: none; }
+  .summary-label {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .summary-value {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  /* ── SECTION TITLES ── */
+  section { padding: 56px 0 0; }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .section-num {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 48px;
+    color: var(--rule);
+    line-height: 1;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--plum);
+    border-bottom: 2px solid var(--sakura);
+    padding-bottom: 6px;
+  }
+
+  /* ── NOTES BANNER ── */
+  .note-banner {
+    background: var(--sakura-pale);
+    border-left: 4px solid var(--sakura);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    font-size: 13.5px;
+    color: var(--plum);
+  }
+  .note-banner strong { font-weight: 600; }
+
+  /* ── ITINERARY DAYS ── */
+  .day-card {
+    margin-bottom: 24px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    border: 1px solid var(--warm-mid);
+  }
+  .day-header {
+    background: var(--plum);
+    color: #fff;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .day-num {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    background: rgba(255,255,255,0.15);
+    padding: 4px 12px;
+    border-radius: 20px;
+    flex-shrink: 0;
+  }
+  .day-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .day-subtitle {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .day-body {
+    background: #fff;
+    padding: 20px 24px;
+  }
+  .activity-row {
+    display: flex;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--warm-mid);
+  }
+  .activity-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .activity-time {
+    font-size: 11.5px;
+    color: var(--plum-light);
+    font-weight: 500;
+    min-width: 70px;
+    padding-top: 3px;
+    letter-spacing: 0.03em;
+  }
+  .activity-content { flex: 1; }
+  .activity-name {
+    font-weight: 600;
+    font-size: 14.5px;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .activity-desc {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.55;
+  }
+  .activity-tip {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 11.5px;
+    background: var(--sakura-pale);
+    color: var(--plum);
+    padding: 2px 10px;
+    border-radius: 12px;
+  }
+  .activity-tip.green {
+    background: #eaf2e8;
+    color: var(--moss);
+  }
+  .activity-tip.blue {
+    background: var(--sky-light);
+    color: var(--sky);
+  }
+
+  /* ── HOTEL SECTION ── */
+  .hotel-card {
+    background: #fff;
+    border: 1px solid var(--warm-mid);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .hotel-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--plum);
+    margin-bottom: 4px;
+  }
+  .hotel-meta {
+    font-size: 12px;
+    color: var(--plum-light);
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+  .hotel-desc {
+    font-size: 13.5px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .hotel-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .hotel-feature {
+    font-size: 11.5px;
+    background: var(--sakura-pale);
+    color: var(--plum);
+    padding: 3px 12px;
+    border-radius: 20px;
+  }
+  .hotel-price-block {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .hotel-price {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--moss);
+  }
+  .hotel-price-note {
+    font-size: 11px;
+    color: #888;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── BUDGET TABLE ── */
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  .budget-table th {
+    text-align: left;
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--plum-light);
+    padding: 10px 16px;
+    background: var(--warm-mid);
+    font-weight: 500;
+  }
+  .budget-table th:last-child { text-align: right; }
+  .budget-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--warm-mid);
+    vertical-align: top;
+  }
+  .budget-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: var(--plum);
+    white-space: nowrap;
+  }
+  .budget-table tr:last-child td { border-bottom: none; }
+  .budget-table .cat { font-size: 11px; color: #888; display: block; }
+  .budget-total-row td {
+    background: var(--plum);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    border-bottom: none;
+  }
+  .budget-total-row td:last-child { color: var(--gold-light); }
+  .budget-remainder-row td {
+    background: var(--moss);
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .budget-remainder-row td:last-child { color: var(--gold-light); }
+
+  /* ── TIPS ── */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .tip-card {
+    background: #fff;
+    border: 1px solid var(--warm-mid);
+    border-radius: 10px;
+    padding: 20px;
+    border-top: 3px solid var(--plum);
+  }
+  .tip-card.green { border-top-color: var(--moss); }
+  .tip-card.blue  { border-top-color: var(--sky); }
+  .tip-card.gold  { border-top-color: var(--gold); }
+  .tip-icon { font-size: 22px; margin-bottom: 8px; }
+  .tip-title {
+    font-weight: 600;
+    font-size: 13.5px;
+    margin-bottom: 6px;
+    color: var(--plum);
+  }
+  .tip-card.green .tip-title { color: var(--moss); }
+  .tip-card.blue  .tip-title { color: var(--sky); }
+  .tip-card.gold  .tip-title { color: var(--gold); }
+  .tip-body { font-size: 12.5px; color: #555; line-height: 1.55; }
+
+  /* ── PACKING ── */
+  .pack-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .pack-section { background: #fff; border: 1px solid var(--warm-mid); border-radius: 10px; padding: 20px; }
+  .pack-title {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--plum);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .pack-list { list-style: none; }
+  .pack-list li {
+    font-size: 13px;
+    padding: 4px 0;
+    color: #444;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .pack-list li::before {
+    content: '✓';
+    color: var(--moss);
+    font-size: 11px;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    margin-top: 60px;
+    background: var(--plum);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 28px 32px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  footer strong { color: #fff; }
+
+  /* ── PRINT ── */
+  @media print {
+    .hero::before { display: none; }
+    .day-card, .hotel-card, .tip-card, .pack-section {
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .summary-bar-inner { grid-template-columns: repeat(2, 1fr); }
+    .hotel-card { grid-template-columns: 1fr; }
+    .hotel-price-block { text-align: left; }
+    .pack-grid { grid-template-columns: 1fr; }
+    .hero { padding: 40px 24px 36px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Family Travel Plan · March 2027</div>
+  <h1>Fukuoka<br>桜 &amp; Onsen</h1>
+  <div class="hero-sub">A relaxed, elderly-friendly journey through Kyushu's warmest city</div>
+  <div class="hero-tags">
+    <span class="tag">👨‍👩‍👦 5 Travellers</span>
+    <span class="tag">🌸 Late March · Cherry Blossoms</span>
+    <span class="tag">♿ Elderly Accessible</span>
+    <span class="tag">🍜 World-class Food</span>
+    <span class="tag">♨️ Onsen &amp; Hot Springs</span>
+    <span class="tag">💴 Budget S$15,000</span>
+  </div>
+</div>
+
+<!-- SUMMARY BAR -->
+<div class="summary-bar">
+  <div class="summary-bar-inner">
+    <div class="summary-item">
+      <span class="summary-label">Duration</span>
+      <span class="summary-value">7 Nights</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">Travel Group</span>
+      <span class="summary-value">5 Pax</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">Total Budget</span>
+      <span class="summary-value">S$15,000</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">Season</span>
+      <span class="summary-value">Sakura 🌸</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- INTRO NOTE -->
+  <section>
+    <div class="note-banner">
+      <strong>Planning philosophy:</strong> This itinerary is built around comfort, not kilometres. Every day has a slow morning, rest-friendly pacing, and accessible venues. Day trips are handled by private coach or guided tour to eliminate navigation stress for your parents. Activities are selected to minimise steep stairs and long walks.
+    </div>
+  </section>
+
+  <!-- ITINERARY -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <div class="section-title">7-Day Itinerary</div>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-num">Day 1</div>
+        <div class="day-title">Arrival · Settle In · Hakata Walk</div>
+        <div class="day-subtitle">~22–24 Mar</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">Afternoon</div>
+          <div class="activity-content">
+            <div class="activity-name">Arrive at Fukuoka Airport (FUK)</div>
+            <div class="activity-desc">Take the subway from the airport to Hakata Station — only 2 stops, about 5 minutes, fully accessible with lifts. Check in to hotel and freshen up.</div>
+            <span class="activity-tip blue">🚇 5-min subway from airport</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Late Afternoon</div>
+          <div class="activity-content">
+            <div class="activity-name">Canal City Hakata stroll</div>
+            <div class="activity-desc">Fukuoka's iconic open-air shopping mall is fully flat and wheelchair-friendly. Browse shops, grab a coffee, and enjoy the fountain plaza. Light on the legs, easy to navigate.</div>
+            <span class="activity-tip green">♿ Fully flat &amp; accessible</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Evening</div>
+          <div class="activity-content">
+            <div class="activity-name">Welcome dinner — Hakata Tonkotsu Ramen</div>
+            <div class="activity-desc">Settle into Fukuoka's famous food culture at a sit-down ramen restaurant near the hotel. Ichiran Hakata has individual booths for privacy and comfort — ideal for elderly diners. Creamy pork bone broth, perfectly seasoned.</div>
+            <span class="activity-tip">🍜 Ichiran or Shin Shin Hakata</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-num">Day 2</div>
+        <div class="day-title">Dazaifu Shrine &amp; Kyushu National Museum</div>
+        <div class="day-subtitle">Easy half-day trip</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">Morning</div>
+          <div class="activity-content">
+            <div class="activity-name">Relaxed breakfast at hotel</div>
+            <div class="activity-desc">No early rush. Allow your parents a leisurely start. Depart Hakata Station around 9:30 AM via Nishitetsu Railway for a 40-min comfortable train ride to Dazaifu.</div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">10:30 AM</div>
+          <div class="activity-content">
+            <div class="activity-name">Dazaifu Tenmangu Shrine</div>
+            <div class="activity-desc">One of Japan's most revered Shinto shrines, dedicated to the deity of scholarship. Walk through serene grounds, cross the three famous bridges (shallow incline, manageable for older guests), and try the beloved Umegae Mochi — grilled rice cakes fresh from roadside stalls. Late March sees the last plum blossoms and early cherry blossoms.</div>
+            <span class="activity-tip">🌸 Plum blossoms still blooming</span>
+            <span class="activity-tip green">⛩️ Gentle flat paths</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">12:30 PM</div>
+          <div class="activity-content">
+            <div class="activity-name">Lunch on Approach Street (Omotesando)</div>
+            <div class="activity-desc">The tree-lined street approaching the shrine is full of small restaurants and tea houses. Try Chikushi-an for warm udon or soba — light and easy on the stomach.</div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">2:00 PM</div>
+          <div class="activity-content">
+            <div class="activity-name">Kyushu National Museum</div>
+            <div class="activity-desc">A 5-minute walk (or free escalator tunnel) from the shrine leads to this world-class museum. Fully air-conditioned, with lifts and benches throughout. The permanent gallery covers 5,000 years of Asian and Japanese cultural exchange — captivating for all ages. Allow 1.5–2 hours.</div>
+            <span class="activity-tip blue">🏛️ Lifts &amp; rest areas throughout</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Evening</div>
+          <div class="activity-content">
+            <div class="activity-name">Return to Hakata · Dinner at Nakasu izakaya</div>
+            <div class="activity-desc">Relax at a traditional Japanese pub serving grilled skewers, tofu, sashimi, and small shared plates. Comfortable seating, warm atmosphere.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-num">Day 3</div>
+        <div class="day-title">Ohori Park &amp; Fukuoka Castle Ruins</div>
+        <div class="day-subtitle">Relaxed local day</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">Morning</div>
+          <div class="activity-content">
+            <div class="activity-name">Ohori Park — Cherry Blossom Walk</div>
+            <div class="activity-desc">Late March is peak cherry blossom season. Ohori Park's 2km lakeside path is flat, paved, and beloved by elderly Japanese walkers. Stroll at your pace, stop on benches, enjoy blossom reflections on the pond. Rent a pedal boat if your parents feel up to it.</div>
+            <span class="activity-tip">🌸 Peak sakura viewing spot</span>
+            <span class="activity-tip green">♿ Flat, paved, wheelchair-friendly</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">11:30 AM</div>
+          <div class="activity-content">
+            <div class="activity-name">Ohori Park Japanese Garden</div>
+            <div class="activity-desc">Just inside the park is a serene traditional garden with stone lanterns, a tea pavilion, and koi ponds. Considered one of Fukuoka's finest spaces for quiet reflection. Tea ceremony available by reservation (¥500 per person).</div>
+            <span class="activity-tip">🍵 Tea ceremony optional</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">1:00 PM</div>
+          <div class="activity-content">
+            <div class="activity-name">Lunch near Ohori — Hakata Mizutaki hotpot</div>
+            <div class="activity-desc">Mizutaki is Fukuoka's famous chicken hot pot — mild, clear broth, tender chicken and vegetables. Perfect comfort food and very gentle on elderly digestive systems. Hakata Mizutaki Hanamidori is a reliable choice nearby.</div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Afternoon</div>
+          <div class="activity-content">
+            <div class="activity-name">Rest period at hotel</div>
+            <div class="activity-desc">A mandatory afternoon rest is built into every day for your parents. This is not downtime — it's what makes the rest of the trip enjoyable for them.</div>
+            <span class="activity-tip">😴 Rest hour built in</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Evening</div>
+          <div class="activity-content">
+            <div class="activity-name">Tenjin Yatai Experience</div>
+            <div class="activity-desc">Fukuoka's famous outdoor food stalls line Watanabe-dori in Tenjin from 6 PM. Sit on covered stools at a riverside yatai and eat your way through yakitori, gyoza, and ramen as lantern light flickers on the Naka River. Cash only — bring ¥3,000–4,000 per person.</div>
+            <span class="activity-tip blue">🏮 Iconic Fukuoka experience</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-num">Day 4</div>
+        <div class="day-title">Day Trip — Yufuin Onsen Village</div>
+        <div class="day-subtitle">Guided coach tour · ~10 hrs</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">8:00 AM</div>
+          <div class="activity-content">
+            <div class="activity-name">Guided Coach Departure from Hakata Station</div>
+            <div class="activity-desc">Book a private or small-group guided day tour to Yufuin. This eliminates all driving, navigation, and transit stress for your parents. Coach is air-conditioned, with comfortable seats and scheduled rest stops. Travel time is approximately 2 hours.</div>
+            <span class="activity-tip blue">🚌 Book: Yufuin Day Tour via Klook or KKday</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">10:30 AM</div>
+          <div class="activity-content">
+            <div class="activity-name">Lake Kinrin Stroll, Yufuin</div>
+            <div class="activity-desc">Arrive in the charming mountain spa town of Yufuin. Walk along mist-shrouded Kinrin Lake — flat, beautiful, atmospheric. The steam rising from geothermal vents gives it an otherworldly feel. The main street Yunotsubo Kaido is pedestrian-friendly with artisan shops, local sweets, and cafés.</div>
+            <span class="activity-tip">🌿 Scenic, peaceful, low-exertion</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">12:00 PM</div>
+          <div class="activity-content">
+            <div class="activity-name">Lunch in Yufuin</div>
+            <div class="activity-desc">Enjoy a sit-down lunch at one of the town's cosy restaurants — Oita-style wagyu beef sets, fresh tofu, or light kaiseki are all available at moderate prices.</div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">2:00 PM</div>
+          <div class="activity-content">
+            <div class="activity-name">Foot-bath Onsen (Ashiyu)</div>
+            <div class="activity-desc">Ideal for elderly travellers — a free or low-cost public foot bath (ashiyu) lets you soak feet in natural hot spring water while sitting comfortably on benches. Multiple spots around Yufuin. The warm mineral water is deeply relaxing and excellent for circulation.</div>
+            <span class="activity-tip green">♨️ No undressing required — just roll up trousers</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">3:30 PM</div>
+          <div class="activity-content">
+            <div class="activity-name">Return Coach to Fukuoka</div>
+            <div class="activity-desc">Relax on the coach ride home. Arrive Hakata by early evening. Light dinner or room service recommended after a full day.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-num">Day 5</div>
+        <div class="day-title">Yanagawa Canal Cruise &amp;柳川 Day Trip</div>
+        <div class="day-subtitle">Gentle boat ride · Half-day trip</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">9:30 AM</div>
+          <div class="activity-content">
+            <div class="activity-name">Nishitetsu Train to Yanagawa</div>
+            <div class="activity-desc">A 40-minute comfortable train ride south of Fukuoka reaches Yanagawa, a historic castle town famous for its network of canals. Direct, easy train route — no transfers required.</div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">10:30 AM</div>
+          <div class="activity-content">
+            <div class="activity-name">Yanagawa Canal Boat Cruise (Donko Fune)</div>
+            <div class="activity-desc">One of Fukuoka's unmissable experiences — a slow-moving flat-bottomed punt boat glides you through willow-lined canals while a boatman poles and sings folk songs. This is effortlessly gentle — no walking required, just sit and enjoy. Perfect for elderly travellers. Cherry blossoms line the banks in late March. Duration: ~70 minutes.</div>
+            <span class="activity-tip">🛶 ~¥1,600 per person, best activity for elderly</span>
+            <span class="activity-tip">🌸 Sakura lines the canals in late March</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">12:30 PM</div>
+          <div class="activity-content">
+            <div class="activity-name">Unagi (Eel) Lunch — Yanagawa Speciality</div>
+            <div class="activity-desc">Yanagawa is famous for its seiro-mushi (steamed eel over rice), one of Japan's most celebrated regional dishes. Restaurants near the boat departure points serve excellent sets. Nutritious, tender, and deeply satisfying.</div>
+            <span class="activity-tip blue">🍣 Regional must-eat dish</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Afternoon</div>
+          <div class="activity-content">
+            <div class="activity-name">Return &amp; Rest</div>
+            <div class="activity-desc">Back in Hakata by 3 PM. Afternoon rest for your parents. The younger members can explore Tenjin shopping district independently.</div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Evening</div>
+          <div class="activity-content">
+            <div class="activity-name">Dinner — Mentaiko &amp; Seafood</div>
+            <div class="activity-desc">Try Fukuoka's other signature — mentaiko (spicy cod roe), fresh Hakata seafood, and warm miso soup. Umi no Nakamichi area restaurants offer fresh Genkai Sea catch.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-num">Day 6</div>
+        <div class="day-title">Fukuoka Tower &amp; Momochi Seaside</div>
+        <div class="day-subtitle">Leisurely city day</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">Morning</div>
+          <div class="activity-content">
+            <div class="activity-name">Free morning — shopping &amp; souvenir hunting</div>
+            <div class="activity-desc">Hakata Station's AMU Plaza basement food floors are perfect for buying Hakata mentaiko, Fukuoka sweets, and speciality gifts. Sit-down café breakfast recommended inside the station.</div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">11:00 AM</div>
+          <div class="activity-content">
+            <div class="activity-name">Fukuoka Tower</div>
+            <div class="activity-desc">Japan's tallest seaside tower at 234m, fully accessible by lift. The observation deck on the 123m level offers 360° views of the city, Hakata Bay, and — on clear days — the mountains of Kyushu. Beautifully atmospheric in late March light.</div>
+            <span class="activity-tip blue">🗼 ~¥800 admission · Lift access</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">12:30 PM</div>
+          <div class="activity-content">
+            <div class="activity-name">Lunch at Momochi Seaside</div>
+            <div class="activity-desc">The beachfront around Fukuoka Tower has several family restaurants with views of Hakata Bay. Sea breeze, fresh catch, and comfortable seating.</div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Afternoon</div>
+          <div class="activity-content">
+            <div class="activity-name">Kushida Shrine &amp; Hakata Traditional Area</div>
+            <div class="activity-desc">Fukuoka's most important shrine, dedicated to the deities who protect the city. Calm, beautiful grounds with ancient camphor trees over 1,000 years old. Easy walking distance from the hotel. The nearby Hakata Machiya Folk Museum tells the story of the city's merchant culture.</div>
+            <span class="activity-tip green">⛩️ Flat grounds, benches throughout</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Evening</div>
+          <div class="activity-content">
+            <div class="activity-name">Farewell Dinner — Kaiseki or Motsunabe</div>
+            <div class="activity-desc">Celebrate the trip over a special meal. Motsunabe (offal hot pot in a rich soy-miso broth) is deeply warming and a Fukuoka signature. Or opt for a multi-course Japanese kaiseki at a hotel restaurant for a more elegant send-off.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-num">Day 7</div>
+        <div class="day-title">Nanzoin &amp; Morning Markets · Departure</div>
+        <div class="day-subtitle">Flexible last day</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">Morning</div>
+          <div class="activity-content">
+            <div class="activity-name">Nanzoin Temple — Reclining Buddha</div>
+            <div class="activity-desc">Optional morning visit (if energy allows): the world's largest bronze reclining Buddha lies peacefully in a forested hillside temple 20 minutes from Hakata by JR Sasaguri Line. The temple grounds are quiet and deeply peaceful. Mostly flat walking with gentle inclines.</div>
+            <span class="activity-tip">🙏 Meaningful and calm</span>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Late Morning</div>
+          <div class="activity-content">
+            <div class="activity-name">Last souvenir run — Hakata Station</div>
+            <div class="activity-desc">Hakata Station's Deitos and Kitte basement malls have everything you need: Hakata ramen kits, mentaiko sets, Fukuoka sweets (Hakata torimon, Niwaka senbei), and travel accessories. Easy to navigate, fully climate-controlled.</div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Afternoon</div>
+          <div class="activity-content">
+            <div class="activity-name">Check-out &amp; Airport Transfer</div>
+            <div class="activity-desc">Take the subway from Hakata Station to Fukuoka Airport in 5 minutes. Arrive 2 hours before departure.</div>
+            <span class="activity-tip blue">🚇 5-min to airport — stress-free departure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCOMMODATION -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div class="section-title">Accommodation</div>
+    </div>
+    <div class="note-banner">
+      Recommended stay: <strong>7 nights at Hakata Station area</strong>. Central location means your parents are never far from the hotel. All listed options have lifts, accessible rooms, and Japanese-style breakfast options.
+    </div>
+
+    <div class="hotel-card">
+      <div>
+        <div class="hotel-name">Grand Hyatt Fukuoka</div>
+        <div class="hotel-meta">⭐⭐⭐⭐⭐ · Canal City Hakata · Best for: Comfort &amp; Space</div>
+        <div class="hotel-desc">
+          Premium 5-star directly connected to Canal City. Spacious rooms, in-house spa, multiple dining options, and outstanding service make this ideal for elderly parents who value ease and luxury. English-speaking concierge. Two adjoining Twin rooms + one Twin covers your group of 5 comfortably.
+        </div>
+        <div class="hotel-features">
+          <span class="hotel-feature">Accessible rooms</span>
+          <span class="hotel-feature">In-house restaurant</span>
+          <span class="hotel-feature">Spa &amp; wellness</span>
+          <span class="hotel-feature">Canal City connected</span>
+          <span class="hotel-feature">English concierge</span>
+        </div>
+      </div>
+      <div class="hotel-price-block">
+        <div class="hotel-price">~S$550</div>
+        <span class="hotel-price-note">per room/night est.</span>
+        <div style="margin-top:8px; font-size:12px; color:#888;">2 rooms × 7 nights<br>≈ S$7,700</div>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <div>
+        <div class="hotel-name">JR Kyushu Hotel Blossom Hakata Chuo</div>
+        <div class="hotel-meta">⭐⭐⭐⭐ · Hakata Station · Best for: Value &amp; Convenience</div>
+        <div class="hotel-desc">
+          Highly-rated 4-star directly linked to Hakata Station, making it the most convenient base for elderly travellers. Free breakfast for certain packages. Rollaway beds available. Rated 9.2 by families. Smart mid-range choice that frees up more of your budget for experiences.
+        </div>
+        <div class="hotel-features">
+          <span class="hotel-feature">Steps from Hakata Station</span>
+          <span class="hotel-feature">Breakfast options</span>
+          <span class="hotel-feature">Rollaway beds</span>
+          <span class="hotel-feature">Excellent lift access</span>
+        </div>
+      </div>
+      <div class="hotel-price-block">
+        <div class="hotel-price">~S$280</div>
+        <span class="hotel-price-note">per room/night est.</span>
+        <div style="margin-top:8px; font-size:12px; color:#888;">2 rooms × 7 nights<br>≈ S$3,920</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDGET -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <div class="section-title">Budget Breakdown</div>
+    </div>
+    <div class="note-banner">
+      All estimates in Singapore Dollars. Based on approximately <strong>1 SGD = 110 JPY</strong> (March 2027 projected rate). Mid-range scenario shown — using JR Kyushu Hotel Blossom. Upgrade to Grand Hyatt adds ~S$3,800.
+    </div>
+
+    <table class="budget-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Details</th>
+          <th>Est. Cost (SGD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Accommodation</strong><span class="cat">7 nights · 2 rooms</span></td>
+          <td>JR Kyushu Hotel Blossom Hakata (~S$280/room/night) or upgrade to Grand Hyatt (~S$550)</td>
+          <td>S$3,920 – S$7,700</td>
+        </tr>
+        <tr>
+          <td><strong>Meals</strong><span class="cat">5 people · 7 days</span></td>
+          <td>Mix of ramen shops, izakayas, restaurant lunches, yatai, convenience store breakfasts. ~S$45–65/person/day.</td>
+          <td>~S$2,100</td>
+        </tr>
+        <tr>
+          <td><strong>Yufuin Day Tour</strong><span class="cat">Day 4 · Guided</span></td>
+          <td>Guided coach day trip to Yufuin (~¥8,500 per person / ~S$78 each × 5)</td>
+          <td>~S$390</td>
+        </tr>
+        <tr>
+          <td><strong>Yanagawa Canal Cruise</strong><span class="cat">Day 5 · Boat ride</span></td>
+          <td>Donko fune boat (~¥1,600 × 5) + Nishitetsu train return (~¥1,500 × 5)</td>
+          <td>~S$145</td>
+        </tr>
+        <tr>
+          <td><strong>Dazaifu + Museum</strong><span class="cat">Day 2</span></td>
+          <td>Train fares (~¥700 × 5) + Kyushu National Museum (~¥700 × 5)</td>
+          <td>~S$65</td>
+        </tr>
+        <tr>
+          <td><strong>Fukuoka Tower</strong><span class="cat">Day 6</span></td>
+          <td>~¥800 per person × 5</td>
+          <td>~S$37</td>
+        </tr>
+        <tr>
+          <td><strong>Local transport</strong><span class="cat">7 days</span></td>
+          <td>Subway day passes, taxis for elderly comfort, buses. ~¥1,200/day × 5 pax × 7 days</td>
+          <td>~S$380</td>
+        </tr>
+        <tr>
+          <td><strong>Souvenir &amp; Shopping</strong><span class="cat">Hakata gifts</span></td>
+          <td>Mentaiko, ramen kits, Hakata dolls, confections, personal shopping</td>
+          <td>~S$600</td>
+        </tr>
+        <tr>
+          <td><strong>Contingency</strong><span class="cat">Weather, comfort upgrades, medical</span></td>
+          <td>10% buffer for unexpected costs, taxi upgrades, or pharmacy needs</td>
+          <td>~S$700</td>
+        </tr>
+        <tr class="budget-total-row">
+          <td colspan="2"><strong>TOTAL ESTIMATED (Mid-range hotel)</strong></td>
+          <td><strong>~S$8,337</strong></td>
+        </tr>
+        <tr class="budget-remainder-row">
+          <td colspan="2">Remaining from S$15,000 budget (room to upgrade hotel or splurge on dining)</td>
+          <td><strong>~S$6,663 buffer</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note-banner">
+      💡 <strong>Good news:</strong> Even at the Grand Hyatt (~S$7,700 accommodation), total trip cost is approximately <strong>S$12,300</strong> — still within budget, leaving ~S$2,700 for upgraded dining, spa treatments, or shopping splurges.
+    </div>
+  </section>
+
+  <!-- PRACTICAL TIPS -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <div class="section-title">Elderly-Friendly Travel Tips</div>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">🚇</div>
+        <div class="tip-title">Fukuoka's Best Asset: The Airport</div>
+        <div class="tip-body">Fukuoka Airport is only 2 subway stops from the city centre — one of the shortest airport-to-city connections in the world. No long transits, no taxing walks with luggage for elderly parents.</div>
+      </div>
+      <div class="tip-card green">
+        <div class="tip-icon">♿</div>
+        <div class="tip-title">Accessibility is Excellent</div>
+        <div class="tip-body">All Fukuoka subway stations have lifts. The city is compact and walkable. When in doubt, take a taxi — fares are short and reasonable. Avoid rush hour (8–9 AM) on trains.</div>
+      </div>
+      <div class="tip-card blue">
+        <div class="tip-icon">💴</div>
+        <div class="tip-title">Cash is Still King</div>
+        <div class="tip-body">Yatai food stalls, smaller ramen shops, and many shrines are cash-only. Carry ¥5,000–10,000 per person in yen. Get Suica or Fukuoka City IC card for convenient train travel.</div>
+      </div>
+      <div class="tip-card gold">
+        <div class="tip-icon">🌸</div>
+        <div class="tip-title">Book Accommodation Early</div>
+        <div class="tip-body">Late March is cherry blossom season — Fukuoka fills up fast. Book hotels and any day tours at least 3–4 months in advance. Sakura timing varies by year; check JMA forecasts closer to departure.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🏥</div>
+        <div class="tip-title">Medical Preparedness</div>
+        <div class="tip-body">Bring sufficient prescription medication with a doctor's letter in English. Fukuoka has excellent hospitals. Consider travel insurance with medical coverage — especially important for your 70s parents.</div>
+      </div>
+      <div class="tip-card green">
+        <div class="tip-icon">🍜</div>
+        <div class="tip-title">Dietary Needs</div>
+        <div class="tip-body">Japanese food is generally light and healthy. Alert restaurants to any allergies in advance. Most ramen broths are pork-based. Soba, udon, grilled fish, tofu, and steamed dishes are widely available and gentle on older stomachs.</div>
+      </div>
+      <div class="tip-card blue">
+        <div class="tip-icon">📱</div>
+        <div class="tip-title">Connectivity</div>
+        <div class="tip-body">Get a Japan SIM card or pocket WiFi at the airport. Google Maps works excellently in Fukuoka. Download the Fukuoka City tourist app for English guides and maps before departure.</div>
+      </div>
+      <div class="tip-card gold">
+        <div class="tip-icon">👟</div>
+        <div class="tip-title">Footwear Matters</div>
+        <div class="tip-body">Pack comfortable non-slip walking shoes. Many shrine and temple interiors require removing shoes — slip-on shoes make life much easier for elderly visitors. Temple floors can be polished and slippery.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKING -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <div class="section-title">Packing Essentials</div>
+    </div>
+
+    <div class="pack-grid">
+      <div class="pack-section">
+        <div class="pack-title">For Parents (70s)</div>
+        <ul class="pack-list">
+          <li>All prescription medications (2-week supply)</li>
+          <li>Doctor's letter in English</li>
+          <li>Travel insurance documents</li>
+          <li>Compression socks for flights</li>
+          <li>Non-slip walking shoes</li>
+          <li>Lightweight foldable cane or trekking pole</li>
+          <li>Portable seat cushion</li>
+          <li>Warm layer (March evenings ~10–14°C)</li>
+          <li>Travel neck pillow for trains</li>
+          <li>Personal ID &amp; NRIC</li>
+        </ul>
+      </div>
+      <div class="pack-section">
+        <div class="pack-title">Group Essentials</div>
+        <ul class="pack-list">
+          <li>Japan SIM card or pocket WiFi</li>
+          <li>Suica / IC card (buy at airport)</li>
+          <li>Yen cash (¥30,000–50,000 per person)</li>
+          <li>Passport (valid 6+ months beyond return)</li>
+          <li>Portable charger / power banks</li>
+          <li>Universal adapter (Japan: Type A)</li>
+          <li>Reusable foldable bag for shopping</li>
+          <li>Wet wipes &amp; hand sanitiser</li>
+          <li>Small first aid kit</li>
+          <li>Translating app (Google Translate)</li>
+        </ul>
+      </div>
+      <div class="pack-section">
+        <div class="pack-title">Clothing (Late March)</div>
+        <ul class="pack-list">
+          <li>Light jacket or windbreaker (layering)</li>
+          <li>1–2 warm inner layers (mornings: ~10°C)</li>
+          <li>T-shirts for warmer afternoons (~18°C)</li>
+          <li>Comfortable trousers (not shorts)</li>
+          <li>Slip-on shoes for shrine visits</li>
+          <li>Light rain jacket or compact umbrella</li>
+          <li>Socks (for removing shoes at temples)</li>
+          <li>1 smart-casual outfit for dinner</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT MAKES THIS TRIP SPECIAL -->
+  <section style="padding-bottom: 56px;">
+    <div class="section-header">
+      <div class="section-num">06</div>
+      <div class="section-title">Why Fukuoka in March</div>
+    </div>
+    <div class="note-banner" style="background:#eaf2e8; border-color: var(--moss); color: var(--moss);">
+      <strong>Fukuoka is arguably Japan's most underrated city — and it's perfect for a multi-generational family trip.</strong><br><br>
+      The airport is 5 minutes from the city. The food is extraordinary. The city is compact. The people are warm and welcoming. Late March brings cherry blossoms without Tokyo's overwhelming crowds, and the weather is mild enough for your parents to be comfortable outdoors. Fukuoka doesn't require you to rush. It rewards the slow and the curious — which is exactly how this trip should be.
+    </div>
+  </section>
+
+</div><!-- /container -->
+
+<footer>
+  <strong>Fukuoka Family Trip · March 2027</strong><br>
+  Planned for James &amp; family · 5 pax · 7 nights · Budget S$15,000<br>
+  <em>All prices are estimates. Book accommodation and day tours 3–4 months in advance. Exchange rate assumed: 1 SGD ≈ 110 JPY.</em>
+</footer>
+
+
+
+</body></html>
